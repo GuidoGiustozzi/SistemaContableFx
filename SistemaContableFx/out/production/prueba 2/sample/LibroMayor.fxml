@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="415.0" prefWidth="674.0" style="-fx-background-color: #383947;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerLibroMayor">
+   <children>
+      <DatePicker fx:id="fechaInicial" layoutX="28.0" layoutY="93.0" stylesheets="@TextFielsSyles.css" />
+      <DatePicker fx:id="fechaFinal" layoutX="379.0" layoutY="93.0" stylesheets="@TextFielsSyles.css" />
+      <Text fill="WHITE" layoutX="28.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha inicial">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="379.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha final">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Text>
+      <Text fill="WHITE" layoutX="257.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Text>
+      <ChoiceBox fx:id="choiceBox" layoutX="212.0" layoutY="93.0" prefWidth="150.0" stylesheets="@TextFielsSyles.css" />
+      <TableView fx:id="TableView" layoutX="6.0" layoutY="140.0" prefHeight="200.0" prefWidth="662.0" stylesheets="@tableview.css">
+        <columns>
+           <TableColumn fx:id="nombreColumn" prefWidth="151.0" text="Nombre" />
+          <TableColumn fx:id="fechaColumn" prefWidth="85.0" text="Fecha" />
+          <TableColumn fx:id="descripcionColumn" prefWidth="164.0" text="Descripción" />
+            <TableColumn fx:id="debeColumn" prefWidth="87.0" text="Debe" />
+            <TableColumn fx:id="haberColumn" prefWidth="99.0" text="Haber" />
+            <TableColumn fx:id="saldoColumn" prefWidth="101.0" text="Saldo" />
+        </columns>
+      </TableView>
+      <Button fx:id="buscarButton" layoutX="523.0" layoutY="364.0" mnemonicParsing="false" onAction="#buscar" stylesheets="@botones.css" text="Buscar" />
+      <Button fx:id="atrasButton" layoutX="596.0" layoutY="364.0" mnemonicParsing="false" onAction="#atras" stylesheets="@botones.css" text="Atras" />
+      <AnchorPane layoutX="-1.0" layoutY="22.0" prefHeight="31.0" prefWidth="676.0" style="-fx-background-color: #2a2a4e;">
+         <children>
+            <Text fill="WHITE" layoutX="287.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Libro mayor">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="pdfImagen" fitHeight="47.0" fitWidth="59.0" layoutX="395.0" layoutY="353.0" onMouseClicked="#pdfs">
+         <image>
+            <Image url="@../../pngwing.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

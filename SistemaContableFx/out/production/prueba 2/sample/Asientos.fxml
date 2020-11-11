@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerAsientos">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="659.0" style="-fx-background-color: #383947;" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="TableView" layoutX="14.0" layoutY="87.0" prefHeight="227.0" prefWidth="486.0" stylesheets="@tableview.css">
+              <columns>
+                <TableColumn fx:id="fechaColumn" prefWidth="113.0" text="Fecha" />
+                <TableColumn fx:id="nroAsientoColumn" prefWidth="172.0" text="Numero de asiento" />
+                  <TableColumn fx:id="descripcionColumn" prefWidth="210.0" text="Descripcion" />
+              </columns>
+            </TableView>
+            <Button fx:id="agregarAsientoButton" layoutX="546.0" layoutY="258.0" mnemonicParsing="false" onAction="#agregarButton" stylesheets="@botones.css" text="Agregar asiento" />
+            <Button fx:id="salirButton" layoutX="574.0" layoutY="370.0" mnemonicParsing="false" onAction="#salirButton" stylesheets="@botones.css" text="Atras" textFill="WHITE" />
+            <AnchorPane layoutY="23.0" prefHeight="44.0" prefWidth="674.0" style="-fx-background-color: #2a2a4e;">
+               <children>
+                  <Text fill="WHITE" layoutX="279.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Asientos">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <ImageView fx:id="imagaPdf" fitHeight="67.0" fitWidth="68.0" layoutX="562.0" layoutY="117.0">
+               <image>
+                  <Image url="@../../pngwing.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="pdfButton" layoutX="549.0" layoutY="201.0" mnemonicParsing="false" onAction="#pdfs" stylesheets="@botones.css" text="Descargar PDF" />
+            <Button fx:id="verendetalleButton" layoutX="531.0" layoutY="314.0" mnemonicParsing="false" onAction="#verendetalleOnAction" stylesheets="@botones.css" text="Ver asiento en detalle" />
+            <ImageView fx:id="marrogiusImageView" fitHeight="46.0" fitWidth="200.0" layoutX="53.0" layoutY="364.0">
+               <image>
+                  <Image url="@../../algo.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

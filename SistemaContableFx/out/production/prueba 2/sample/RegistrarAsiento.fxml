@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="758.0" prefWidth="600.0" style="-fx-background-color: #383947;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerRegistrarAsiento">
+   <children>
+      <AnchorPane layoutY="27.0" prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #2a2a4e;">
+         <children>
+            <Text fill="WHITE" layoutX="244.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrar asiento">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <Text fill="WHITE" layoutX="14.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha" />
+      <Text fill="WHITE" layoutX="14.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero de asiento" />
+      <Text fill="WHITE" layoutX="210.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripcion" />
+      <TextArea fx:id="descripcionArea" layoutX="207.0" layoutY="85.0" onMouseExited="#initialize" prefHeight="76.0" prefWidth="174.0" />
+      <Button fx:id="planButton" layoutX="490.0" layoutY="180.0" mnemonicParsing="false" onAction="#irCuentasOnAction" stylesheets="@botones.css" text="Plan de Cuenta" />
+      <Separator layoutY="209.0" prefHeight="2.0" prefWidth="600.0" style="-fx-background-color: #2a2a4e;" />
+      <Button fx:id="agregarButton" disable="true" layoutX="516.0" layoutY="719.0" mnemonicParsing="false" onAction="#verSiDebeHaberIguales" stylesheets="@botones.css" text="Agregar" />
+      <Button fx:id="atrasButton" layoutX="337.0" layoutY="174.0" mnemonicParsing="false" stylesheets="@botones.css" text="Atras" />
+      <Pane fx:id="cuentaPane1" layoutX="36.0" layoutY="219.0" prefHeight="59.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="montoField1" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras1" onMouseClicked="#devolverNombreCuenta1" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <ChoiceBox fx:id="cuenta1" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton1" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar1" stylesheets="@botones.css" text="Validar" />
+            <Label fx:id="nombreCuenta1" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label fx:id="numeroasientoLabel" layoutX="22.0" layoutY="166.0" prefHeight="17.0" prefWidth="111.0" textFill="#eee8e8">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Pane fx:id="cuentaPane2" disable="true" layoutX="36.0" layoutY="289.0" prefHeight="59.0" prefWidth="450.0">
+         <children>
+            <TextField fx:id="montoField2" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras2" onMouseClicked="#devolverNombreCuenta2" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <Label fx:id="nombreCuenta2" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+            <ChoiceBox fx:id="cuenta2" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton2" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar2" stylesheets="@botones.css" text="Validar" />
+         </children>
+      </Pane>
+      <Label fx:id="mensajeLabel" layoutX="22.0" layoutY="698.0" prefHeight="52.0" prefWidth="475.0" textFill="#e8e3e3">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Label>
+      <Pane fx:id="cuentaPane3" layoutX="36.0" layoutY="359.0" prefHeight="59.0" prefWidth="450.0" visible="false">
+         <children>
+            <TextField fx:id="montoField3" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras3" onMouseClicked="#devolverNombreCuenta3" stylesheets="@TextFielsSyles.css" visible="false" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <Button fx:id="validarButton3" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar3" stylesheets="@botones.css" text="Validar" />
+            <ChoiceBox fx:id="cuenta3" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Label fx:id="nombreCuenta3" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+         </children>
+      </Pane>
+      <Pane fx:id="cuentaPane4" disable="true" layoutX="36.0" layoutY="429.0" prefHeight="59.0" prefWidth="450.0" visible="false">
+         <children>
+            <TextField fx:id="montoField4" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras4" onMouseClicked="#devolverNombreCuenta4" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <ChoiceBox fx:id="cuenta4" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton4" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar4" stylesheets="@botones.css" text="Validar" />
+            <Label fx:id="nombreCuenta4" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label fx:id="diaLabel" layoutX="15.0" layoutY="93.0" prefHeight="25.0" prefWidth="111.0" textFill="#fffbfb" />
+      <Pane fx:id="cuentaPane5" disable="true" layoutX="36.0" layoutY="499.0" prefHeight="59.0" prefWidth="450.0" visible="false">
+         <children>
+            <TextField fx:id="montoField5" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras5" onMouseClicked="#devolverNombreCuenta5" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <ChoiceBox fx:id="cuenta5" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton5" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar5" stylesheets="@botones.css" text="Validar" />
+            <Label fx:id="nombreCuenta5" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <ImageView fx:id="agregartercera" fitHeight="38.0" fitWidth="36.0" layoutX="509.0" layoutY="308.0" onMouseClicked="#permitirTercera" visible="false">
+         <image>
+            <Image url="@../../agregar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="agregarcuarta" fitHeight="38.0" fitWidth="36.0" layoutX="509.0" layoutY="373.0" onMouseClicked="#permitirCuarta" visible="false">
+         <image>
+            <Image url="@../../agregar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="agregarquinta" fitHeight="38.0" fitWidth="36.0" layoutX="509.0" layoutY="445.0" onMouseClicked="#permitirQuinta" visible="false">
+         <image>
+            <Image url="@../../agregar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sacartercera" fitHeight="38.0" fitWidth="36.0" layoutX="545.0" layoutY="373.0" onMouseClicked="#noPermitirTercera" visible="false">
+         <image>
+            <Image url="@../../cancelar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sacarcuarta" fitHeight="38.0" fitWidth="36.0" layoutX="545.0" layoutY="445.0" onMouseClicked="#noPermitirCuarta" visible="false">
+         <image>
+            <Image url="@../../cancelar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sacarquinta" fitHeight="38.0" fitWidth="36.0" layoutX="545.0" layoutY="515.0" onMouseClicked="#noPermitirQuinta" visible="false">
+         <image>
+            <Image url="@../../cancelar.png" />
+         </image>
+      </ImageView>
+      <Pane fx:id="cuentaPane6" disable="true" layoutX="36.0" layoutY="569.0" prefHeight="59.0" prefWidth="450.0" visible="false">
+         <children>
+            <TextField fx:id="montoField6" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras6" onMouseClicked="#devolverNombreCuenta6" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <ChoiceBox fx:id="cuenta6" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton6" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar6" stylesheets="@botones.css" text="Validar" />
+            <Label fx:id="nombreCuenta6" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane fx:id="cuentaPane7" disable="true" layoutX="36.0" layoutY="639.0" prefHeight="59.0" prefWidth="450.0" visible="false">
+         <children>
+            <TextField fx:id="montoField7" layoutX="210.0" layoutY="23.0" onKeyTyped="#noLetras7" onMouseClicked="#devolverNombreCuenta7" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="250.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monto" wrappingWidth="35.6953125" />
+            <ChoiceBox fx:id="cuenta7" layoutY="23.0" prefHeight="25.0" prefWidth="60.0" stylesheets="@TextFielsSyles.css" />
+            <Text fill="WHITE" layoutX="10.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuenta" wrappingWidth="44.00000274181366" />
+            <Button fx:id="validarButton7" layoutX="380.0" layoutY="23.0" mnemonicParsing="false" onAction="#validar7" stylesheets="@botones.css" text="Validar" />
+            <Label fx:id="nombreCuenta7" layoutX="79.0" layoutY="27.0" prefHeight="17.0" prefWidth="121.0" textFill="WHITE" />
+         </children>
+      </Pane>
+      <ImageView fx:id="sacarsexta" fitHeight="38.0" fitWidth="36.0" layoutX="545.0" layoutY="585.0" onMouseClicked="#noPermitirSexta" visible="false">
+         <image>
+            <Image url="@../../cancelar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="sacarseptima" fitHeight="38.0" fitWidth="36.0" layoutX="545.0" layoutY="655.0" onMouseClicked="#noPermitirSeptima" visible="false">
+         <image>
+            <Image url="@../../cancelar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="agregarsexta" fitHeight="38.0" fitWidth="36.0" layoutX="509.0" layoutY="515.0" onMouseClicked="#permitirSexta" visible="false">
+         <image>
+            <Image url="@../../agregar.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="agregarseptima" fitHeight="38.0" fitWidth="36.0" layoutX="509.0" layoutY="585.0" onMouseClicked="#permitirSeptima" visible="false">
+         <image>
+            <Image url="@../../agregar.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

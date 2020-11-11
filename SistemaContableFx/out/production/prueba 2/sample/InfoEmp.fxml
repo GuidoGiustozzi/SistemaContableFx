@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1200.0" style="-fx-background-color: #383947;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerInfoEmp">
+    <children>
+        <AnchorPane layoutY="14.0" prefHeight="27.0" prefWidth="1200" style="-fx-background-color: #2a2a4e;">
+            <children>
+                <Text fill="WHITE" layoutX="500.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de la empresa">
+                    <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="64.0" layoutY="63.0" prefHeight="290.0" prefWidth="1050.0" style="-fx-background-color: #2a2a4e;">
+            <AnchorPane prefHeight="250.0" prefWidth="1050.0">
+                <children>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mathcop" wrappingWidth="79.28613424301147">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="30-1234567-8">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monteagudo 2772, Pergamino, Buenos Aires, Argentina">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="empresa@mathcop.com">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2477-XXXXXX">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="47">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1/10/2020">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <Text fill="WHITE" layoutX="275.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CP: 2700">
+                        <font>
+                            <Font name="System Italic" size="18.0" />
+                        </font>
+                    </Text>
+                    <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="822.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../circle-cropped.png" />
+                        </image>
+                    </ImageView>
+                </children></AnchorPane>
+            <Text fill="WHITE" layoutX="4.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Razón social: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUIT: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dirección">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail de contacto: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono de contacto: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cantidad de empleados: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="WHITE" layoutX="4.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Año de inicio de actividades: ">
+                <font>
+                    <Font name="System Bold Italic" size="18.0" />
+                </font>
+            </Text>
+            <Text fill="#ffffff40" layoutX="452.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Copyright 2020 @ softRMG" textAlignment="CENTER" />
+        </AnchorPane>
+    </children>
+</AnchorPane>

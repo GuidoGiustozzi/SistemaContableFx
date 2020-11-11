@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="450.0" prefWidth="652.0" style="-fx-background-color: #383947;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerCuenta">
+   <children>
+      <TableView fx:id="TableView" layoutX="24.0" layoutY="90.0" prefHeight="200.0" prefWidth="603.0" stylesheets="@tableview.css">
+        <columns>
+            <TableColumn fx:id="codigoColumn" prefWidth="127.0" text="Codigo" />
+          <TableColumn fx:id="nombreColumn" prefWidth="220.0" text="Nombre" />
+            <TableColumn fx:id="tipoColumn" prefWidth="138.0" text="Tipo" />
+            <TableColumn fx:id="recibesaldoColumn" prefWidth="117.0" text="Recibe Saldo" />
+        </columns>
+      </TableView>
+      <Button fx:id="agregarButton" layoutX="473.0" layoutY="367.0" mnemonicParsing="false" onAction="#agregarOnAction" stylesheets="@botones.css" text="Agregar" />
+      <Button fx:id="atrasButton" layoutX="575.0" layoutY="367.0" mnemonicParsing="false" onAction="#salirButton" stylesheets="@botones.css" text="Atras" />
+      <AnchorPane layoutX="1.0" layoutY="27.0" prefHeight="31.0" prefWidth="652.0" style="-fx-background-color: #2a2a4e;">
+         <children>
+            <Text fill="WHITE" layoutX="282.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cuentas">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="marrogiusImageView" fitHeight="46.0" fitWidth="200.0" layoutX="35.0" layoutY="356.0">
+         <image>
+            <Image url="@../../algo.PNG" />
+         </image>
+      </ImageView>
+      <Button fx:id="habilitarButton" layoutX="274.0" layoutY="367.0" mnemonicParsing="false" onAction="#habilitarOnAction" stylesheets="@botones.css" text="Habilitar" />
+      <Button fx:id="deshabiliarButton" layoutX="369.0" layoutY="367.0" mnemonicParsing="false" onAction="#deshabilitarOnAction" stylesheets="@botones.css" text="Deshabilitar" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,18 @@
+
+
+.button {
+    -fx-background-color: linear-gradient(#ff5400, #f4841a);
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}
+
+.button {
+    -fx-background-color: #f4841a;
+    -fx-text-fill: white;
+}
+.button.focused{
+    -fx-background-color: transparent;
+}
+
+
